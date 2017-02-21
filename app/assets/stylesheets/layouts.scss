@@ -118,11 +118,12 @@ a {
 }
 
 .search__submit {
-	background: 0 0 no-repeat;
+	background: image_url('search.png') 0 0 no-repeat;
+	background-size: contain;
 	width: 18px;
 	height: 18px;
 	display: block;
-	// border: none;
+	border: none;
 	position: absolute;
 	right: 18px;
 	top: 50%;
