@@ -233,8 +233,9 @@ margin-bottom: 20px;
 }
 
 .nav__icon, .nav__title {
-	// display: inline-block;
+	display: block;
 	vertical-align: middle;
+	text-align: center;
 
 	svg {
 		height: 100%;
@@ -261,15 +262,25 @@ margin-bottom: 20px;
 .bradcrumbs__item {
 	display: inline-block;
 	vertical-align: middle;
+	margin-left: 10px;
 
 	&:first-child {
 		&:before {
 			display: none;
 		}
+		.breadcrumbs__link {
+			&:before {
+				display: none
+			}
+		
+		}
 	}
+
+
 }
 
 .breadcrumbs__link {
+	margin-left: 0px;
 	font-size: 14px;
 	color: #fa3f37;
 	vertical-align: middle;
@@ -279,8 +290,20 @@ margin-bottom: 20px;
 		display: inline-block;
 		width: 20px;
 		height: 10px;
-		background: image_url('right_arrow.png') 0 0 no-repeat;
+		background: image_url('right-arrow.png') 0 0 no-repeat;
 		vertical-align: middle;
 		margin-right: 15px;
 	}
+}
+
+.title {
+	font-size: 24px;
+	color: #2e2e2e;
+	margin-top: 0;
+	font-weight: normal;
+}
+
+.container {
+	padding-bottom: 10px;
+
 }
