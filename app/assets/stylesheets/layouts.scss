@@ -15,6 +15,9 @@ html {
 body { 
   height: 100%;
   width: 100%;
+  font-size: 14px;
+  line-height: 1.42;
+  // font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
 }
 
 .wrapper {
@@ -58,12 +61,13 @@ a {
 /* ------- header -------- */
 
 .header {
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff7400+0,ffd0aa+100 */
-	background: #ff7400; /* Old browsers */
-	background: -moz-linear-gradient(top, #ff7400 0%, #ffd0aa 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #ff7400 0%,#ffd0aa 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #ff7400 0%,#ffd0aa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7400', endColorstr='#ffd0aa',GradientType=0 ); /* IE6-9 */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff7400+0,ffbe89+100 */
+background: #ff7400; /* Old browsers */
+background: -moz-linear-gradient(left,  #ff7400 0%, #ffbe89 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #ff7400 0%,#ffbe89 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #ff7400 0%,#ffbe89 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7400', endColorstr='#ffbe89',GradientType=1 ); /* IE6-9 */
+margin-bottom: 20px;
 }
 
 .header__logo, .header__menu, .header__search {
@@ -115,6 +119,7 @@ a {
 	color: #fff;
 	outline: none;
 	width: 82%;
+	margin-top: 9px;
 }
 
 .search__submit {
@@ -135,6 +140,8 @@ a {
 	display: inline-block;
 }
 
+//---------- menu -----------//
+
 .menu {
 	text-align: justify;
 
@@ -143,5 +150,137 @@ a {
 		display: inline-block;
 		width: 100%;
 		height: 0;
+	}
+}
+
+.menu__link {
+	display: block;
+	padding: 10px;
+}
+
+.menu__link__iconed {
+	padding-right: 20px;
+	padding-left: 50px;
+	position: relative;
+	border: 2px solid #A5C651;
+	@include border-radius(50px);
+}
+
+.shopping_cart {
+	width: 18px;
+	height: 18px;
+	border: none;
+}
+
+.menu__link__text {
+	color: #fff;
+	font-size: 15x;
+}
+
+.menu__link__icon {
+	position: absolute;
+	left: 13px;
+	top: 0px;
+	bottom: 0px;
+	width: 30px;
+}
+
+.shopping_cart_pic {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.header__top {
+	padding: 20px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(#fff, .2);
+}
+
+//--------- nav ----------//
+
+.nav__list {
+	text-align: justify;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 0;
+	}
+}
+
+.nav__item {
+	display: inline-block;
+}
+
+.nav__link {
+	&:hover {
+		.nav__title {
+			color: #ffc968;
+		}
+
+		.nav__icon svg * {
+			fill: #ffc968;
+		}
+	}
+}
+
+.nav__icon, .nav__title {
+	// display: inline-block;
+	vertical-align: middle;
+
+	svg {
+		height: 100%;
+	}
+
+	svg * {
+		fill: #fff;
+	}
+}
+
+.nav__icon * {
+	max-height: 45px; 
+	max-width: 115px;
+}
+
+.nav__title {
+	font-size: 12px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+//---------- breadcrumbs ----------//
+
+.bradcrumbs__item {
+	display: inline-block;
+	vertical-align: middle;
+
+	&:first-child {
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.breadcrumbs__link {
+	font-size: 14px;
+	color: #fa3f37;
+	vertical-align: middle;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 20px;
+		height: 10px;
+		background: image_url('right_arrow.png') 0 0 no-repeat;
+		vertical-align: middle;
+		margin-right: 15px;
 	}
 }
